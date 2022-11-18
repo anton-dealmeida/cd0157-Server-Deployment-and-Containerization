@@ -16,7 +16,7 @@ PASSWORD = os.environ.get('PASSWORD', 'huff12puff34;-)')
 
 @pytest.fixture
 def client():
-    os.environ['JWT_SECRET'] = SECRET
+    os.environ['JWT_SECRET'] = JWT_SECRET
     main.APP.config['TESTING'] = True
     client = main.APP.test_client()
 
